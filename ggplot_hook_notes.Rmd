@@ -1,0 +1,31 @@
+---
+title: "ggplot_hook"
+author: "Sarah"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Setting up my environment
+Notes: Setting up my R environment by loading the 'tidyverse' and 'palmerpenguins' packages
+
+```{r loading packages, warning=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+### Flipper Length vs. Body Mass 
+
+Here we plot the flipper length against the body mass of hte penguins. 
+
+```{r warning=FALSE}
+ggplot(data=penguins,aes(x=flipper_length_mm,y=body_mass_g))+
+  geom_point(color="purple")
+```
+### Flipper Length vs. Body Mass by Species
+
+Here we plot the flipper length against the body mass of penguins, grouped by species.
+
+```{r warning = FALSE}
+ggplot(data=penguins,aes(x=flipper_length_mm,y=body_mass_g))+
+  geom_point(aes(shape=species))
+```
+
