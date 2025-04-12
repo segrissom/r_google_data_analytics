@@ -1,0 +1,29 @@
+---
+title: "Module 7 Hands On Activity"
+author: "Sarah"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+### Loading in Libraries and Data
+
+```{r ggplot for penguin data}
+
+library(ggplot2)
+
+library(palmerpenguins)
+
+data(penguins)
+
+View(penguins)
+```
+
+### Creating Plot of data
+
+```{r ggplot for penguin data visualization}
+
+ggplot(data = penguins) +
+
+  geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g))
+```
+
